@@ -1,0 +1,28 @@
+{
+  "name": "express-ssr-react-vite",
+  "version": "1.0.0",
+  "description": "A lite demo of server-side rendering with Express, React, ReactRouter and Vite",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:client && npm run build:server",
+    "dev": "node server",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.jsx",
+    "serve": "NODE_ENV=production node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sirv": "^2.0.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.5"
+  }
+}
